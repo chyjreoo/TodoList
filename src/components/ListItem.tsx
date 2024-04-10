@@ -15,7 +15,7 @@ function ListItem({ item }: {item:ListProps;} ) {
 
     const listItemRef = useRef<HTMLDivElement>(null);
 
-
+    console.log(progress)
     useEffect(()=>{
         const handleClickOutside = (event: MouseEvent) => {
             if (listItemRef.current && !listItemRef.current.contains(event.target as Node)) {
