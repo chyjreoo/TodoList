@@ -1,10 +1,109 @@
 .list-item {
-    border-radius: 6px;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow: 0 2px 7px -2px rgb(0 0 0 / 0.1), 0 1px 1px -3px rgb(0 0 0 / 0.1);
     border: 1px solid #eee;
-    padding: 16px;
+    padding-left: 20px;
+    padding-right: 16px;
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     background-color: #fff;
+}
+.list-item .form-control {
+    flex: 1 1 80%;
+    box-shadow: none;
+}
+.list-item .form-control::placeholder {
+    color: #d4d4d4;
+}
+.list-item .form-control:focus {
+    border-color: #7bb14a !important;
+}
+.list-item .alert-text {
+    flex: 1 1 100%;
+    color: #da5757;
+    padding: 8px 8px;
+    margin-bottom: 0;
+    font-size: 0.95em;
+}
+@keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    25% {
+        height: 0;
+        width: 8px;
+    }
+
+    50% {
+        height: 15px;
+        width: 8px;
+    }
+}
+
+.form-check-label {
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    height: 28px;
+    width: 28px;
+    
+}
+
+.form-check-label span {
+    display: block;
+    height: 28px;
+    position: relative;
+    width: 28px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-check-label span:after {
+    -moz-transform: scaleX(-1) rotate(135deg);
+    -ms-transform: scaleX(-1) rotate(135deg);
+    -webkit-transform: scaleX(-1) rotate(135deg);
+    transform: scaleX(-1) rotate(135deg);
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-right: 2px solid transparent;
+    border-top: 2px solid transparent;
+    content: '';
+    display: block;
+    height: 15px;
+    width: 8px;
+    position: absolute;
+    left: 5px;
+    top: 14px;
+    transition: all 280ms;
+}
+
+.form-check-label input {
+    display: none
+}
+.form-check-label input:checked+span {
+    background-color: #7bb14a;
+    border-color: #7bb14a;
+}
+.form-check-label input:checked+span:after {
+    -webkit-animation: check .8s;
+    -moz-animation: check .8s;
+    -o-animation: check .8s;
+    animation: check .8s;
+    border-color: #fff
+}
+.btn {
+    background-color: transparent;
+    border: 0;
+    color: #7bb14a;
+}
+.btn:hover,:not(.btn-check)+.btn:active {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
 }

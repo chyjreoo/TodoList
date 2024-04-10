@@ -1,0 +1,8 @@
+.search-input .icon {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    width: 28px;
+    height: 28px;
+    color: #d3d3d3;
+}

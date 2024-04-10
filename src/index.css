@@ -1,0 +1,22 @@
+:root {
+    --bs-primary: #7bb14a;
+    --bs-primary-rgb: 123, 177, 74;
+    --bs-secondary: #e2e8f0;
+    --bs-secondary-rgb: 226, 232, 240;
+}
+
+body {
+    color: #44474f;
+}
+.page-content::before {
+    content: "";
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 400px;
+    height: 400px;
+    background-image: url('/images/stone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
