@@ -52,11 +52,10 @@ function List() {
         ))
     } else {
         if (completeList.length) {
-            yetListHtml = <div className='text-center text-gray opacity-50 my-5 py-5'>
-                <p>呼！這裡沒有任務了</p><div><PiCoffee size={22} /></div>
+            yetListHtml = <div className='empty-text'>呼！這裡沒有任務了<div><PiCoffee size={22} /></div>
             </div>
         } else {
-            yetListHtml = <div className='text-center text-gray opacity-50 my-5 py-5'>按<GoPlusCircle className='mx-2 mb-1' size={20} />新增任務</div>
+            yetListHtml = <div className='empty-text'>按<GoPlusCircle className='mx-2 mb-1' size={20} />新增任務</div>
         }
     }
 
@@ -73,9 +72,7 @@ function List() {
             </motion.div>)
         })
     } else {
-        completeListHtml = <div className='text-center text-gray opacity-50 my-5 py-5'>
-                <p>還沒有完成的項目</p>
-            </div>
+        completeListHtml = <div className='empty-text'>還沒有完成的項目</div>
     }
 
 

@@ -14,8 +14,6 @@ function ListItem({ item }: {item:ListProps;} ) {
     const [isChecked, setIsChecked] = useState(item.progress === 'complete'); // Set initial checked status
 
     const listItemRef = useRef<HTMLDivElement>(null);
-
-    console.log(progress)
     useEffect(()=>{
         const handleClickOutside = (event: MouseEvent) => {
             if (listItemRef.current && !listItemRef.current.contains(event.target as Node)) {
@@ -45,7 +43,9 @@ function ListItem({ item }: {item:ListProps;} ) {
         deleteTodo(id)
     }
     const handleEditShow = ()=>{
-        setShowEdit(!showEdit);
+        if(item.progress === 'yet') {
+            setShowEdit(!showEdit);
+        }
     }
 
     let content;
@@ -63,7 +63,8 @@ function ListItem({ item }: {item:ListProps;} ) {
             <div onClick={handleEditShow} className='input-change-trigger flex-grow-1 py-4'>
                 {item.title}
             </div>
-            <Button className='edit-btn' onClick={handleEditShow}><GoPencil /></Button>
+            {isChecked?'':<Button className='edit-btn' onClick={handleEditShow}><GoPencil /></Button>}
+            
             <Button className='del-btn' onClick={()=>handleDelete(item.id)}><GoTrash /></Button>
         </>
     } else {

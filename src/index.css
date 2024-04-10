@@ -7,6 +7,7 @@
 
 body {
     color: #44474f;
+    letter-spacing: 0.04em;
 }
 .page-content::before {
     content: "";

@@ -3,6 +3,8 @@
     background-color: rgb(247 247 247 / 40%);
     border-radius: 4px;
     padding: 10px;
+    padding-top: 14px;
+    margin-bottom: 24px;
 }
 .list-outter.complete-list {
     background-color: rgb(245 247 243 / 35%);
@@ -31,6 +33,17 @@
 .list-wrapper::-webkit-scrollbar-thumb:hover {
     background: #cacaca;
 }
+.empty-text {
+    color: #acacac;
+    opacity: 0.7;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    z-index: -1;
+}
 .list-box {
     padding: 48px;
 }
@@ -51,4 +64,10 @@
 }
 .icon-height {
     height: 45px;
+}
+@media (max-width: 992px) {
+    .list-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

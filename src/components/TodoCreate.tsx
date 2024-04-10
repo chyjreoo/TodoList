@@ -32,7 +32,7 @@ function TodoCreate({ onSubmit }: { onSubmit: () => void }) {
             <div className='d-flex w-100 my-4 flex-wrap'>
                 <Form.Control autoFocus onChange={(e)=>setTodoText(e.target.value)} value={todoText} className='border-0 border-bottom rounded-0' type="text" placeholder="輸入待辦事項" />
                 <Button type='submit'><IoCheckmark /></Button>
-                <Button type='button' onClick={handleClose}><IoCloseOutline /></Button>
+                <Button type='button' onClick={handleClose}><IoCloseOutline size={17} /></Button>
 
                 {alertText? <p className='alert-text'><GoAlert className='me-1' />請輸入待辦事項</p> : ""}
             </div>
