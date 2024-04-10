@@ -39,7 +39,7 @@ export function Provider({ children }: {children: ReactNode}) {
             // 測試用
             setTimeout(()=>{
                 setIsLoading(false);
-            },2500)
+            },1800)
         } catch (error) {
             console.error('Error fetching list:', error);
             setIsLoading(false);
