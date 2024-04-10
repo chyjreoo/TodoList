@@ -5,11 +5,11 @@
     padding: 10px;
     padding-top: 14px;
     margin-bottom: 24px;
+    backdrop-filter: blur(15px);
 }
 .list-outter.complete-list {
     background-color: rgb(245 247 243 / 35%);
     border: 1px solid #e7eee0;
-    backdrop-filter: blur(15px);
 }
 .list-wrapper {
     height: 550px;
@@ -69,5 +69,11 @@
     .list-box {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+@media (max-width: 450px) {
+    .list-box {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
