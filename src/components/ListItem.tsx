@@ -10,8 +10,8 @@ function ListItem({ item }: {item:ListProps;} ) {
 
     const { deleteTodo, editTodo } = useContext(ListContext)
     const [showEdit, setShowEdit] = useState(false);
-    const [progress, setProgress] = useState('yet');
-    const [isChecked, setIsChecked] = useState(item.progress === 'complete'); // Set initial checked status
+    // const [progress, setProgress] = useState('yet');
+    const [isChecked, setIsChecked] = useState(item.progress === 'complete'); 
 
     const listItemRef = useRef<HTMLDivElement>(null);
     useEffect(()=>{
@@ -33,8 +33,8 @@ function ListItem({ item }: {item:ListProps;} ) {
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const isChecked = event.target.checked;
         const newProgress = isChecked ? 'complete' : 'yet';
-        setProgress(newProgress); // Update progress state
-        editTodo(item.id, item.title, newProgress); // Pass the new progress directly
+        // setProgress(newProgress);
+        editTodo(item.id, item.title, newProgress);
 
         setIsChecked(isChecked);
     }
